@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reception Booking</title>
+    <link rel="stylesheet" href="styles1.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body id="home">
+    <header>
+        <nav>
+            <div class="logo">▀▄▀▄▀▄ᔦ 𐌔𐌄𐌀𐌔Ꝋ𐌍𐌔▄▀▄▀▄▀</div>
+            <div class="menu-index">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#rooms">Rooms</a>
+                <a href="#reservation-section">Tables</a>
+                <a href="#dining">Dining Areas</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="register">
+                <a href="">Register</a>
+            </div>
+        </nav>
+    </header>
+    <!-- moving slides and registation links-->
+    <section class="hero" id="hero">
+        <div class="slideshow-container">
+          <div class="slide"><img src="https://ik.imagekit.io/manu6268/hotal/r1.jpeg?updatedAt=1746213102102" alt="Room 1">
+            <div class="slide-info">
+                <h3>Iron Hill Craft Brewery & Restaurant</h3>
+                <p>Exceptional cuisine and handcrafted beers in an elegant atmosphere.</p><br><br><br>
+                <a href="#reservation-section">Reserve a Table</a>
+                <a href="#register">Register</a>
+            </div>
+            </div>
+          <div class="slide"><img src="r2.jpg" alt="Room 2">
+            <div class="slide-info">
+                <h3>Luxury Accommodations</h3>
+                <p>Comfortable rooms with premium amenities.</p><br><br>
+                <a href="#reservation-section">Reserve a Table</a>
+                <a href="#register">Register</a>
+            </div></div>
+          <div class="slide"><img src="r3.jpg" alt="Room 3">
+            <div class="slide-info">
+                <h3>Sophisticated Dining</h3>
+                <p>A culinary journey like no other.</p><br><br>
+                <a href="#reservation-section">Reserve a Table</a>
+                <a href="#register">Register</a>
+            </div></div>
+          <div class="slide"><img src="r4.jpg" alt="Room 4">
+            <div class="slide-info">
+                <h3>Breathtaking Terrace Views</h3>
+                <p>Dine under the open sky with panoramic city views</p><br><br>
+                <a href="#reservation-section">Reserve a Table</a>
+                <a href="#register">Register</a>
+            </div></div>
+        </div>
+      </section>
+    <!-- About us of the website-->
+    <section class="about" id="about">
+        <h2>About Iron Hill</h2>
+        <div class="about1">
+            <div class="about-info">
+              <p><strong>Iron Hill</strong> is a landmark dining destination that combines exceptional cuisine, craft brewing expertise, and stunning architectural design to create an unparalleled experience for our guests.</p>
+              <p>Founded in 2007, our restaurant has quickly become renowned for our commitment to culinary excellence, featuring a diverse menu that draws inspiration from global cuisines while showcasing local ingredients and seasonal specialties.</p>
+              <p>What truly sets Iron Hill apart is our on-site craft brewery, where our skilled brewers create a rotating selection of distinctive beers that complement our food offerings perfectly. From hoppy IPAs to rich stouts and refreshing seasonal brews, there's something to satisfy every beer enthusiast.</p>
+              <p>Our award-winning architectural design creates a dynamic, multi-level dining experience with a variety of spaces to suit any occasion. From our spacious main dining room and intimate private dining areas to our stunning outdoor terrace with panoramic city views, each space offers its own unique ambiance.</p>
+            </div>
+            <div class="about-image">
+              <div><img src="r1.jpeg"></div>
+              <div><img src="r2.jpg"></div>
+              <div><img src="r3.jpg"></div>
+              <div><img src="r4.jpg"></div>
+            </div>
+            </div>
+    </section>
+    <!-- Our services-->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80" alt="Room Booking">
+                <h3>Room Booking</h3>
+                <p>Book your stay with us and enjoy a comfortable experience.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&q=80" alt="Dining">
+                <h3>Dining</h3>
+                <p>Enjoy delicious meals at our in-house restaurant.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80" alt="Event Spaces">
+                <h3>Event Spaces</h3>
+                <p>Host your events in our spacious and well-equipped venues.</p>
+            </div>
+        </div>
+    </section>
+    <!-- looking the food availability-->
+    <section class="our-menu" id="menu">
+      <h2>Our Menu</h2>
+      <p class="subheading">Explore our diverse menu featuring culinary masterpieces from around the world, prepared with the finest ingredients by our expert chefs.</p>
+    
+      <div class="tab-controls">
+        <button class="tabclick1" onclick="showTab(event, 'food')">Food Menu</button>
+        <button class="tabclick1" onclick="showTab(event, 'beverages')">Beverages</button>
+      </div>
+    
+      <!-- Food Tab -->
+      <section class="food" id="food" style="display: block;">
+        <div class="filters">
+          <select id="dietFilter">
+            <option value="All">All</option>
+            <option value="Veg">Veg</option>
+            <option value="Vegan">Vegan</option>
+            <option value="GF">GF</option>
+            <option value="Seafood">Seafood</option>
+          </select>
+          <select id="cuisineFilter">
+            <option value="All">All Cuisines</option>
+            <option value="Indian">Indian</option>
+            <option value="Thai">Thai</option>
+            <option value="French">French</option>
+            <option value="Japanese">Japanese</option>
+          </select>
+        </div>
+    
+        <div class="menu-grid" id="menuGrid">
+          <div class="menu-card" data-diet="Veg" data-cuisine="Italian">
+            <img src="https://ik.imagekit.io/manu6268/hotal/food1.avif?updatedAt=1746092264655" alt="Truffle Mushroom Risotto">
+            <div class="menu-content">
+              <div class="menu-title">Truffle Mushroom Risotto</div>
+              <div class="menu-description">Creamy arborio rice with seasonal truffle and wild mushrooms</div>
+              <div class="price">₹250</div>
+              <div class="labels"><span>Veg</span></div>
+            </div>
+            <div class="popular-badge">Popular</div>
+          </div>
+          <div class="menu-card" data-diet="Veg GF" data-cuisine="Indian">
+            <img src="https://ik.imagekit.io/manu6268/hotal/food3.avif?updatedAt=1746091397372" alt="Paneer Tikka">
+            <div class="menu-content">
+              <div class="menu-title">Paneer Tikka</div>
+              <div class="menu-description">Classic North Indian chicken cooked in a creamy tomato sauce</div>
+              <div class="price">₹150</div>
+              <div class="labels"><span>Veg</span><span class="gf">GF</span></div>
+            </div>
+          </div>
+      
+          <div class="menu-card" data-diet="Veg Vegan" data-cuisine="Thai">
+            <img src="food2.avif" alt="Pad Thai">
+            <div class="menu-content">
+              <div class="menu-title">Pad Thai</div>
+              <div class="menu-description">Rice noodles stir-fried with tofu, bean sprouts, and peanuts</div>
+              <div class="price">₹200</div>
+              <div class="labels"><span>Veg</span><span>Vegan</span></div>
+            </div>
+          </div>
+      
+          <div class="menu-card" data-diet="Veg" data-cuisine="French">
+            <img src="https://ik.imagekit.io/manu6268/hotal/food6.avif?updatedAt=1746092100583" alt="Creme Brulee">
+            <div class="menu-content">
+              <div class="menu-title">Crème Brûlée</div>
+              <div class="menu-description">Classic French dessert with caramelized sugar crust</div>
+              <div class="price">₹300</div>
+              <div class="labels"><span>Veg</span></div>
+            </div>
+          </div>
+      
+          <div class="menu-card" data-diet="Seafood" data-cuisine="Japanese">
+            <img src="https://ik.imagekit.io/manu6268/hotal/food4.avif?updatedAt=1746091397171" alt="Sushi Assortment">
+            <div class="menu-content">
+              <div class="menu-title">Sushi Assortment</div>
+              <div class="menu-description">Assorted fresh sushi rolls with wasabi and pickled ginger</div>
+              <div class="price">₹250</div>
+              <div class="labels"><span>Seafood</span></div>
+            </div>
+          </div>
+      
+          <div class="menu-card" data-diet="Veg" data-cuisine="French">
+            <img src="https://ik.imagekit.io/manu6268/hotal/food5.avif" alt="Tiramisu">
+            <div class="menu-content">
+              <div class="menu-title">Tiramisu</div>
+              <div class="menu-description">Italian coffee-flavored dessert with mascarpone cheese</div>
+              <div class="price">₹200</div>
+              <div class="labels"><span>Veg</span></div>
+            </div>
+            <div class="popular-badge">Popular</div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Beverage Tab -->
+      <section class="beverages" id="beverages" style="display: none;">
+        <div class="filters">
+          <label for="beverageType">Beverage Type</label>
+          <select id="beverageType" onchange="filterBeverages()">
+            <option value="All">All</option>
+            <option value="Wine">Wine</option>
+            <option value="Beer">Beer</option>
+            <option value="Cocktail">Cocktail</option>
+            <option value="Spirits">Spirits</option>
+            <option value="Non-Alcoholic">Non-Alcoholic</option>
+          </select>
+        </div>
+        <div class="menu-grid" id="beverageGrid">
+          <div class="menu-card" data-type="Wine">
+            <img src="w1.avif" alt="Espresso">
+            <div class="menu-content">
+              <div class="menu-title">Château Margaux</div>
+              <div class="menu-description">Premium French red wine with a silky texture and complex flavor profile</div>
+              <div class="price">₹200</div>
+            </div>
+          </div>
+  
+          <div class="menu-card" data-type="Beer">
+            <img src="w2.avif" alt="Iced Latte">
+            <div class="menu-content">
+              <div class="menu-title">Craft IPA</div>
+              <div class="menu-description">Locally brewed IPA with citrus notes and a hoppy finish</div>
+              <div class="price">₹150</div>
+            </div>
+          </div>
+  
+          <div class="menu-card" data-type="Cocktail">
+            <img src="w3.avif" alt="Mojito">
+            <div class="menu-content">
+              <div class="menu-title">Classic Mojito</div>
+              <div class="menu-description">Refreshing cocktail with rum, mint, lime, sugar and soda water</div>
+              <div class="price">₹200</div>
+            </div>
+          </div>
+  
+          <div class="menu-card" data-type="Spirits">
+            <img src="w4.avif" alt="Lemonade">
+            <div class="menu-content">
+              <div class="menu-title">Macallan 18</div>
+              <div class="menu-description">Premium single malt scotch whisky with notes of dried fruit and spice</div>
+              <div class="price">₹200</div>
+            </div>
+          </div>
+          <div class="menu-card" data-type="Non-Alcoholic">
+            <img src="w5.avif" alt="Lemonade">
+            <div class="menu-content">
+              <div class="menu-title">Fresh Fruit Mocktail</div>
+              <div class="menu-description">Seasonal fruits blended with mint and lime, served over ice</div>
+              <div class="price">₹100</div>
+            </div>
+          </div>
+          <div class="menu-card" data-type="Non-Alcoholic">
+            <img src="w6.avif" alt="Lemonade">
+            <div class="menu-content">
+              <div class="menu-title">Sparkling Water</div>
+              <div class="menu-description">Premium sparkling mineral water with a refreshing taste</div>
+              <div class="price">₹100</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- booking for an drink beer-->
+    <section class="drinks" id="drinks">
+        <h2>Our Craft Brewery</h2>
+        <p class="subheading">Discover our signature craft beers, brewed on-site with the finest ingredients and expert craftsmanship. From hoppy IPAs to rich stouts, we have a brew for every palate.</p>
+        <div class="controls">
+          <select id="filterType" onchange="filterBeers()">
+            <option value="all">All Types</option>
+            <option value="IPA">IPA</option>
+            <option value="Stout">Stout</option>
+            <option value="Lager">Lager</option>
+            <option value="Ale">Ale</option>
+            <option value="Seasonal">Seasonal</option>
+          </select> 
+          </div>  
+        <!-- Beer Cards -->
+        <div class="beer-grid" id="beerGrid">
+          <div class="beer-card" data-type="IPA" data-price="7.5">
+            <img src="b1.avif" alt="Hoppy Horizon IPA">
+            <div class="beer-info">
+              <h3>Hoppy Horizon IPA</h3>
+              <p>A bold, hop-forward IPA with citrus and pine notes, balanced with a subtle malt backbone.</p>
+              <div class="beer-price-tag">
+                <span class="price">₹150</span>
+                <span class="tag">IPA</span>
+              </div>
+              <div class="beer-stats">
+                <div><strong>ABV</strong><br>6.8%</div>
+                <div><strong>IBU</strong><br>65</div>
+                <div><strong>Origin</strong><br>House Brewed</div>
+              </div>
+              <p class="beer-pairing"><strong>Pairs well with:</strong> Truffle Mushroom Risotto</p>
+            </div>
+          </div>
+      
+          <div class="beer-card" data-type="Stout" data-price="8">
+            <img src="b2.avif" alt="Midnight Velvet Stout">
+            <div class="beer-info">
+              <h3>Midnight Velvet Stout</h3>
+              <p>Rich, creamy stout with notes of chocolate, coffee, and a hint of vanilla. Perfect for dessert pairing.</p>
+              <div class="beer-price-tag">
+                <span class="price">₹200</span>
+                <span class="tag">Stout</span>
+              </div>
+              <div class="beer-stats">
+                <div><strong>ABV</strong><br>7.2%</div>
+                <div><strong>IBU</strong><br>35</div>
+                <div><strong>Origin</strong><br>House Brewed</div>
+              </div>
+              <p class="beer-pairing"><strong>Pairs well with:</strong> Crème Brûlée, Butter Chicken</p>
+            </div>
+          </div>
+      
+          <div class="beer-card" data-type="Lager" data-price="6.5">
+            <img src="b3.avif" alt="Golden Lager">
+            <div class="beer-info">
+              <h3>Golden Lager</h3>
+              <p>Crisp, clean, and refreshing lager with a light body and subtle hop character. Easy drinking for any occasion.</p>
+              <div class="beer-price-tag">
+                <span class="price">₹150</span>
+                <span class="tag">Lager</span>
+              </div>
+              <div class="beer-stats">
+                <div><strong>ABV</strong><br>4.8%</div>
+                <div><strong>IBU</strong><br>20</div>
+                <div><strong>Origin</strong><br>House Brewed</div>
+              </div>
+              <p class="beer-pairing"><strong>Pairs well with:</strong> Grilled Sausages</p>
+            </div>
+          </div>
+          <div class="beer-card" data-type="Ale" data-price="7">
+            <img src="b4.avif" alt="Amber Waves Ale">
+            <div class="beer-info">
+              <h3>Amber Waves Ale</h3>
+              <p>A balanced amber ale with caramel malt flavors and a moderate hop presence. Versatile with many dishes.</p>
+              <div class="beer-price-tag">
+                <span class="price">₹250</span>
+                <span class="tag">Ale</span>
+              </div>
+              <div class="beer-stats">
+                <div><strong>ABV</strong><br>5.5%</div>
+                <div><strong>IBU</strong><br>30</div>
+                <div><strong>Origin</strong><br>House Brewed</div>
+              </div>
+              <p class="beer-pairing"><strong>Pairs well with:</strong> Paneer Tikka, Sushi Platter</p>
+            </div>
+          </div>
+          
+          <div class="beer-card" data-type="Seasonal" data-price="7.5">
+            <img src="b5.avif" alt="Summer Citrus Wheat">
+            <div class="beer-info">
+              <h3>Summer Citrus Wheat</h3>
+              <p>Seasonal wheat beer with notes of orange and lemon. Light, refreshing, and perfect for warm weather.</p>
+              <div class="beer-price-tag">
+                <span class="price">₹150</span>
+                <span class="tag">Seasonal</span>
+              </div>
+              <div class="beer-stats">
+                <div><strong>ABV</strong><br>5%</div>
+                <div><strong>IBU</strong><br>15</div>
+                <div><strong>Origin</strong><br>House Brewed</div>
+              </div>
+              <p class="beer-pairing"><strong>Pairs well with:</strong> Grilled Fish, Summer Salads</p>
+            </div>
+          </div>
+          
+          <div class="beer-card" data-type="Seasonal" data-price="8">
+            <img src="b6.avif" alt="Pumpkin Spice Ale">
+            <div class="beer-info">
+              <h3>Pumpkin Spice Ale</h3>
+              <p>Seasonal favorite with real pumpkin and warm autumn spices. Rich body with a smooth finish.</p>
+              <div class="beer-price-tag">
+                <span class="price">₹250</span>
+                <span class="tag">Seasonal</span>
+              </div>
+              <div class="beer-stats">
+                <div><strong>ABV</strong><br>6.2%</div>
+                <div><strong>IBU</strong><br>25</div>
+                <div><strong>Origin</strong><br>House Brewed</div>
+              </div>
+              <p class="beer-pairing"><strong>Pairs well with:</strong> Roast Turkey, Pumpkin Pie</p>
+            </div>
+          </div>
+        </div><br><br>
+    </section>
+    <!-- booking for an room-->
+    <section class="rooms" id="rooms">
+      <h2>Luxury Accommodations</h2>
+      <p class="subheading">Experience unparalleled comfort in our luxurious rooms and suites, each designed to provide an exceptional stay with premium amenities and attentive service.</p>
+      <section class="availability-form">
+        <form id="roomFilterForm">
+          <div class="form-group">
+            <label>Check-in Date</label>
+            <input type="date" id="checkin" required>
+          </div>
+          <div class="form-group">
+            <label>Nights</label>
+            <select id="nights" required>
+              <option value="1">1 Night</option>
+              <option value="2">2 Nights</option>
+              <option value="3">3 Nights</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Adults</label>
+            <select id="adults" required>
+              <option value="1">1 Adult</option>
+              <option value="2">2 Adults</option>
+              <option value="3">3 Adults</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Children</label>
+            <select id="children">
+              <option value="0">0 Children</option>
+              <option value="1">1 Child</option>
+              <option value="2">2 Children</option>
+              <option value="3">3 Children</option>
+            </select>
+          </div>
+          <button type="submit">Check Availability</button>
+        </form>
+      </section>
+    
+      <!-- Room Listings -->
+      <section class="room-list">
+        <div class="room-card" data-max-adults="1" data-max-children="0" data-min-nights="1">
+          <img src="c1.avif" alt="Single Room">
+          <h3>Luxury Suite</h3>
+          <p>Our signature suite featuring elegant furnishings, a private balcony with panoramic views, and a luxurious marble bathroom with a jacuzzi tub.</p>
+          <p class="price">₹2000 / night</p>
+          <a href="#book">Book Now</a>
+        </div>
+    
+        <div class="room-card" data-max-adults="2" data-max-children="1" data-min-nights="1">
+          <img src="c2.avif" alt="Double Room">
+          <h3>Deluxe Room</h3>
+          <p>A spacious and comfortable room with modern amenities, perfect for business travelers or couples seeking comfortable accommodations.</p>
+          <p class="price">₹1500 / night</p>
+          <a href="#book">Book Now</a>
+        </div>
+    
+        <div class="room-card" data-max-adults="3" data-max-children="2" data-min-nights="2">
+          <img src="https://ik.imagekit.io/manu6268/hotal/room6.avif?updatedAt=1746037272470" alt="Luxury Suite">
+          <h3>Family Suite</h3>
+          <p>A spacious suite designed for families, featuring a master bedroom and a separate living area with a sofa bed, ideal for accommodating up to 4 people.</p>
+          <p class="price">₹3000 / night</p>
+          <a href="#book">Book Now</a>
+        </div>
+        <div class="room-card" data-max-adults="3" data-max-children="2" data-min-nights="2">
+          <img src="c4.avif" alt="Luxury Suite">
+          <h3>Presidential Suite</h3>
+          <p>The epitome of luxury, our Presidential Suite offers unparalleled elegance and comfort with a separate living room, dining area, private butler service, and breathtaking views.</p>
+          <p class="price">₹2500 / night</p>
+          <a href="#book">Book Now</a>
+        </div>
+      </section>
+    </section>
+    <!-- booking for an table-->
+    <section class="reservation-section" id="reservation-section">
+        <h2>Reserve Your Table</h2>
+        <p class="subheading">Book your perfect dining experience at our restaurant. Whether you're planning a romantic dinner, family gathering, or a business meeting, we have the ideal setting for every occasion.</p>
+        <div class="reservation-wrapper">
+          <!-- Reservation Form -->
+          <form class="reservation-form" id="reservationForm">
+            <h3 class="reserve">Make a Reservation</h3>
+            <div class="date">
+              <label>Date</label>
+              <input type="date" name="date" required>
+            </div>
+            <div class="time">
+              <label>Time</label>
+              <input type="time" name="time" required>
+            </div>
+            <div class="guests">
+              <label>Number of Guests</label>
+              <select name="guests" required>
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4+ Guests</option>
+              </select>
+            </div>
+            <div class="seat">
+              <label>Seating Type</label>
+              <select name="seating" required>
+                <option>Single</option>
+                <option>Couple</option>
+                <option>Family</option>
+              </select>
+            </div>
+            <div class="location">
+              <label>Preferred Location</label>
+              <select name="location">
+                <option>Indoor Dining</option>
+                <option>Terrace</option>
+                <option>Poolside</option>
+                <option>Garden</option>
+              </select>
+            </div>
+            <div class="request">
+              <label>Special Requests</label>
+              <input type="text" name="requests" placeholder="e.g., Birthday celebration, Dietary needs">
+            </div>
+            <h4 class="reserve">Your Information</h4>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required class="email">
+          
+            <button type="submit" class="reserve">Reserve Now</button>
+          </form>
+    
+          <!-- Dining Info -->
+          <div class="dining-info" id="dining-info">
+            <img src="https://ik.imagekit.io/manu6268/hotal/r3.jpg?updatedAt=1745461354274" alt="Restaurant Interior">
+            <div class="info-text">
+              <h3>Dining Experience</h3>
+              <p>Enjoy an unforgettable dining experience in our elegant restaurant. We offer a variety of seating options to suit your preferences:</p>
+              <ul>
+                <li><strong>Indoor Dining:</strong> Elegant ambiance with sophisticated decor</li>
+                <li><strong>Terrace:</strong> Breathtaking views with open-air dining</li>
+                <li><strong>Poolside:</strong> Relaxed setting with a refreshing atmosphere</li>
+                <li><strong>Garden:</strong> Serene natural surroundings</li>
+              </ul>
+              <p><strong>Restaurant Hours:</strong><br>
+                Lunch: 12:00 PM - 3:00 PM<br>
+                Dinner: 5:00 PM - 10:00 PM<br>
+                Closed on Mondays
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- dining informations-->
+    <section class="dining" id="dining">
+        <h2>Dining Areas</h2>
+        <p class="subheading">Explore our diverse dining spaces, each offering a unique ambience and experience. From intimate indoor settings to breathtaking outdoor views, find your perfect spot.</p>
+        <main class="container">
+          <aside class="sidebar">
+            <h1>Our Spaces</h1>
+            <ul class="spaces">
+              <li class="active" data-id="1"><strong>The Grand Terrace</strong><br><span>Capacity: 60 guests</span></li>
+              <li data-id="2"><strong>The Poolside Lounge</strong><br><span>Capacity: 40 guests</span></li>
+              <li data-id="3"><strong>The Chef's Table</strong><br><span>Capacity: 10 guests</span></li>
+              <li data-id="4"><strong>The Royal Dining Hall</strong><br><span>Capacity: 100 guests</span></li>
+              <li data-id="5"><strong>The Intimate Alcove</strong><br><span>Capacity: 8 guests</span></li>
+            </ul>
+          </aside>
+      
+          <section class="content" data-id="1">
+            <div class="image-box">
+              <img src="d1.avif" alt="The Grand Terrace" /><br>
+              <h3>The Grand Terrace</h3>
+              <p>An elegant open-air dining space overlooking the city skyline, ideal for romantic dinners and special celebrations.</p><br>
+            </div>
+          </section>
+          <section class="content" data-id="2" style="display: none;">
+            <div class="image-box">
+              <img src="d2.avif" alt="The Poolside Lounge" /><br>
+              <h3>The Poolside Lounge</h3>
+              <p>A relaxed dining experience beside our infinity pool, offering a casual yet sophisticated atmosphere with breathtaking water views.</p><br>
+            </div>
+          </section>
+          <section class="content" data-id="3" style="display: none;">
+            <div class="image-box">
+              <img src="d3.avif" alt="The Poolside Lounge" /><br>
+              <h3>The Chef's Table</h3>
+              <p>An exclusive dining experience where guests can enjoy a personalized tasting menu prepared right before their eyes by our executive chef.</p><br>
+            </div>
+          </section>
+          <section class="content" data-id="4" style="display: none;">
+            <div class="image-box">
+              <img src="d4.avif" alt="The Poolside Lounge" /><br>
+              <h3>The Royal Dining Hall</h3>
+              <p>Our main indoor dining area featuring elegant decor, plush seating, and a sophisticated ambiance perfect for family dinners or business meals.</p><br>
+            </div>
+          </section>
+          <section class="content" data-id="5" style="display: none;">
+            <div class="image-box">
+              <img src="d5.avif" alt="The Poolside Lounge" /><br>
+              <h3>The Intimate Alcove</h3>
+              <p>Private dining spaces, each designed with a unique theme, offering an intimate setting for small groups seeking privacy and exclusivity.</p><br>
+            </div>
+          </section>
+    </section>
+    <!-- upcoming servieses...-->
+    <section class="events" id="events">
+        <h2>Upcoming Events</h2>
+      <p class="subheading">Join us for special events, live music performances, tasting sessions, and themed nights. There's always something exciting happening at our restaurant.</p>
+      <div class="filters">
+        <select id="eventType">
+          <option value="all">All Events</option>
+          <option value="live-music">Live Music</option>
+          <option value="tasting">Tasting</option>
+          <option value="themed-night">Themed Night</option>
+          <option value="food-special">Food Special</option>
+          <option value="testing">Testing</option>
+        </select>
+        <input type="date" id="eventDate">
+      </div>
+        <section class="event-grid">
+          <!-- Event Card 1 -->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u1.avif');">
+              <span class="tag live-music">live-music</span>
+            </div>
+            <div class="event-content">
+              <h3>Jazz Night with The Quartet</h3>
+              <p><strong>📅</strong> Saturday, May 3, 2025<br><strong>🕖</strong> 7:00 PM - 10:00 PM</p>
+              <p>Enjoy an evening of sophisticated jazz music with our resident quartet while savoring our chef's special menu and craft cocktails.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 2 -->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u2.avif');">
+              <span class="tag tasting">tasting</span>
+            </div>
+            <div class="event-content">
+              <h3>Seasonal Beer Tasting</h3>
+              <p><strong>📅</strong> Tuesday, May 6, 2025<br><strong>🕕</strong> 6:00 PM - 8:00 PM</p>
+              <p>Sample our newest seasonal brews with guided tasting notes from our master brewer. Includes food pairings specially selected by our chef.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+      
+          <!-- Event Card 3 -->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u3.avif');">
+              <span class="tag themed-night">themed-night</span>
+            </div>
+            <div class="event-content">
+              <h3>Mediterranean Night</h3>
+              <p><strong>📅</strong> Thursday, May 8, 2025<br><strong>🕕</strong> 6:00 PM - 11:00 PM</p>
+              <p>Experience a culinary journey through the Mediterranean with our special menu featuring authentic dishes from Greece, Italy, Spain, and Morocco.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 4-->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u4.avif');">
+              <span class="tag live-music">live-music</span>
+            </div>
+            <div class="event-content">
+              <h3>Acoustic Guitar Sessions</h3>
+              <p><strong>📅</strong> Sunday, May 11, 2025<br><strong>🕖</strong> 8:00 PM - 11:00 PM</p>
+              <p>Relax to the soothing sounds of acoustic guitar performances by local artists while enjoying your favorite drinks and dishes.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 5-->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u5.avif');">
+              <span class="tag food-special">food-special</span>
+            </div>
+            <div class="event-content">
+              <h3>Chef's Table Experience</h3>
+              <p><strong>📅</strong>Wednesday, May 14, 2025<br><strong>🕖</strong> 7:00 PM - 10:00 PM</p>
+              <p>An exclusive multi-course dining experience at our chef's table, with each dish personally presented by our executive chef.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 6-->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u6.avif');">
+              <span class="tag testing">testing</span>
+            </div>
+            <div class="event-content">
+              <h3>Craft Cocktail Workshop</h3>
+              <p><strong>📅</strong> Friday, May 16, 2025<br><strong>🕖</strong> 4:00 PM - 6:00 PM</p>
+              <p>Learn the art of mixology with our head bartender. Create and sample classic and innovative cocktails while learning professional techniques.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 7-->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u7.avif');">
+              <span class="tag live-music">live-music</span>
+            </div>
+            <div class="event-content">
+              <h3>Live DJ Night</h3>
+              <p><strong>📅</strong> Sunday, May 18, 2025<br><strong>🕖</strong> 9:00 PM - 1:00 AM</p>
+              <p>Enjoy great music and a vibrant atmosphere with our special DJ night featuring both classic hits and the latest tracks.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 8-->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u8.avif');">
+              <span class="tag testing">testing</span>
+            </div>
+            <div class="event-content">
+              <h3>Wine & Cheese Pairing</h3>
+              <p><strong>📅</strong> Wednesday, May 21, 2025<br><strong>🕖</strong> 5:00 PM - 7:00 PM</p>
+              <p>Sample a curated selection of fine wines paired with artisanal cheeses from around the world. Our sommelier will guide you through each pairing.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+          <!-- Event Card 9-->
+          <div class="event-card">
+            <div class="event-image" style="background-image: url('u9.avif');">
+              <span class="tag themed-night">themed-night</span>
+            </div>
+            <div class="event-content">
+              <h3>Asian Fusion Night</h3>
+              <p><strong>📅</strong> Friday, May 23, 2025<br><strong>🕖</strong> 6:00 PM - 11:00 PM</p>
+              <p>Experience the vibrant flavors of Asia with our special fusion menu combining elements from Japanese, Thai, Chinese, and Vietnamese cuisines.</p>
+              <a href="#reservation-section"><button class="reserve-btn">Reserve a Table</button></a>
+            </div>
+          </div>
+        </section>
+    </section>
+    <!-- photograpy servieses...-->
+    <section class="photography-section">
+      <h2>Photography Services</h2>
+      <p class="subheading">Capture your special moments at our restaurant with our professional photography services. Whether it's a romantic dinner, family celebration, or corporate event, our photographers will help you preserve the memories.</p>
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'photo-cards')">Photography Packages</button>
+        <button class="tablinks" onclick="openCity(event, 'photobooth')">Photobooth Experience</button>
+      </div>
+      <div class="photo-cards" id="photo-cards">
+        <div class="photo-card">
+          <div class="photo-image">
+            <span class="duration">30 Minutes</span>
+            <img src="https://ik.imagekit.io/manu6268/hotal/room5.jpeg?updatedAt=1745420567359" alt="Casual Dining Moments">
+          </div>
+          <h3>Casual Dining Moments</h3>
+          <p>Perfect for couples or small groups wanting to capture casual dining memories.</p>
+          <strong>What's Included:</strong>
+          <ul>
+            <li>Professional photographer</li>
+            <li>30-minute session during your meal</li>
+            <li>15 edited digital photos</li>
+            <li>Online gallery for easy sharing</li>
+            <li>2 complimentary 5x7 prints</li>
+          </ul>
+          <div class="price-row">
+            <span class="price">₹500</span>
+            <button class="book-btn">Book Now</button>
+          </div>
+        </div>
+    
+        <div class="photo-card">
+          <div class="photo-image">
+            <span class="duration">1 Hour</span>
+            <img src="https://ik.imagekit.io/manu6268/hotal/cake.avif?updatedAt=1746040231251" alt="Special Celebration">
+          </div>
+          <h3>Special Celebration</h3>
+          <p>Ideal for birthdays, anniversaries, or other special occasions worth remembering.</p>
+          <strong>What's Included:</strong>
+          <ul>
+            <li>Professional photographer</li>
+            <li>1-hour coverage of your celebration</li>
+            <li>30 edited digital photos</li>
+            <li>Online gallery with download options</li>
+            <li>Custom photo album (10 pages)</li>
+            <li>4 complimentary 5x7 prints</li>
+          </ul>
+          <div class="price-row">
+            <span class="price">₹1500</span>
+            <button class="book-btn">Book Now</button>
+          </div>
+        </div>
+    
+        <div class="photo-card">
+          <div class="photo-image">
+            <span class="duration">2 Hours</span>
+            <img src="https://ik.imagekit.io/manu6268/hotal/premium.avif?updatedAt=1746040964814" alt="Premium Event Coverage">
+          </div>
+          <h3>Premium Event Coverage</h3>
+          <p>Comprehensive photography coverage for corporate events or large gatherings.</p>
+          <strong>What's Included:</strong>
+          <ul>
+            <li>Professional photographer</li>
+            <li>2-hour event coverage</li>
+            <li>60+ edited digital photos</li>
+            <li>Group and individual shots</li>
+            <li>Online gallery with download options</li>
+            <li>Custom photo album (20 pages)</li>
+            <li>One framed 8x10 print</li>
+            <li>Social media-ready image set</li>
+          </ul>
+          <div class="price-row">
+            <span class="price">₹3000</span>
+            <button class="book-btn">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <!--new-->
+        <div class="photobooth" id="photobooth">
+          <div class="photo-left">
+            <img src="photo.avif" alt="Guests raising glasses">
+          </div>
+          <div class="photo-right">
+            <h3>Self-Service Photobooth</h3>
+            <p>Our state-of-the-art photobooths provide a fun and interactive way to capture memories during your visit. With high-quality cameras, professional lighting, and a variety of props and backgrounds, you can create stunning photos to take home instantly.</p>
+            <div class="features">
+              <div class="feature">
+                <div class="feature-icon">📸</div>
+                <div class="feature-text">
+                  <strong>Professional-Quality Photos</strong>
+                  High-resolution images with perfect lighting every time
+                </div>
+              </div>
+              <div class="feature">
+                <div class="feature-icon">🖨️</div>
+                <div class="feature-text">
+                  <strong>Instant Printing</strong>
+                  Take home physical prints instantly, plus digital copies
+                </div>
+              </div>
+            </div>
+            <div class="pricing">
+              <strong>Pricing:</strong><br>
+              ₹50 per session (includes 3 prints and digital copies)<br>
+              ₹10 for each additional print<br>
+              <small>Book in advance or use on a walk-in basis when available</small>
+            </div>
+            <a href="#" class="reserve-button">Reserve a Photobooth</a>
+          </div>
+        </div>
+    </section>
+    <!-- contact us-->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p class="subheading">Our team is always ready to assist you with any inquiries or special requests.Reach out to us through any of the channels below.</p>
+    
+      <div class="contact-container">
+        <div class="contact-form">
+          <h3>Get in Touch</h3>
+          <form id="contactForm">
+            <div class="name">
+              <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="email">
+              <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="message">
+              <label for="message">Your Message</label>
+            <textarea id="message" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="send-button">Send Message</button>
+          </form>
+        </div>
+    
+        <div class="contact-info">
+          <h3>Our Information</h3>
+    
+          <div class="info-box">
+            <strong>Location</strong>
+            <p>123 Gourmet Avenue<br>Culinary District<br>Gastronomy City, GC 12345</p>
+          </div>
+    
+          <div class="info-box">
+            <strong>Hours</strong>
+            <p>Monday: Closed<br>Tuesday - Sunday: 12:00 PM - 10:00 PM</p>
+          </div>
+    
+          <div class="info-box">
+            <strong>Contact</strong>
+            <p>Phone: (123) 456-7890<br>Email: info@dineinstyle.com<br>Reservations: book@dineinstyle.com</p>
+          </div>
+    
+          <div class="info-box">
+            <strong>24/7 Helpline</strong>
+            <p>For urgent assistance: <br><strong>(123) 456-7899</strong><br>Available at all times</p>
+          </div>
+    
+          <div class="info-box photography">
+            <strong>Photography Services</strong>
+            <p>
+              Capture your special moments at our restaurant with our professional
+              photography services. Perfect for celebrations, proposals, or simply
+              preserving memories of an exceptional dining experience.
+            </p>
+            <p><strong>Starting at $99</strong><br><small>Advance booking required</small></p>
+            <a href="#photographer" class="photo-button">Book a Photographer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer of the website-->
+    <footer>
+      <p>&copy; 2025 ᔦ 𐌔𐌄𐌀𐌔Ꝋ𐌍𐌔. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </footer>
+    <!-- sciprt for moving slides-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slideshow-container .slide');
+    let current = 0;
+
+    // show first slide
+    slides[current].classList.add('active');
+
+    setInterval(() => {
+      // fade out current
+      slides[current].classList.remove('active');
+      // advance index
+      current = (current + 1) % slides.length;
+      // fade in next
+      slides[current].classList.add('active');
+    }, 5000);  // change slide every 5 seconds
+  });
+    </script>
+</body>
+<!-- script for fixed header background-->
+<script>
+    window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) { // Change background after scrolling 50px
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+<!-- script for filtering for food-->
+<script>
+  const dietFilter = document.getElementById("dietFilter");
+  const cuisineFilter = document.getElementById("cuisineFilter");
+  const cards = document.querySelectorAll(".menu-card");
+
+  function filterMenu() {
+    const diet = dietFilter.value;
+    const cuisine = cuisineFilter.value;
+
+    cards.forEach(card => {
+      const cardDiet = card.getAttribute("data-diet");
+      const cardCuisine = card.getAttribute("data-cuisine");
+
+      const matchDiet = (diet === "All") || cardDiet.includes(diet);
+      const matchCuisine = (cuisine === "All") || cardCuisine === cuisine;
+
+      if (matchDiet && matchCuisine) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+  dietFilter.addEventListener("change", filterMenu);
+  cuisineFilter.addEventListener("change", filterMenu);
+</script>
+<!-- Script for switching tabs in photogaphy section-->
+<script>
+  function openCity(evt, tabId) {
+    // Hide all tabs
+    const tabContents = document.querySelectorAll('.photo-cards, .photobooth');
+    tabContents.forEach(tab => tab.classList.remove('active'));
+
+    // Remove 'active' class from all buttons
+    const tabButtons = document.querySelectorAll('.tab button');
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Show selected tab and highlight the button
+    document.getElementById(tabId).classList.add('active');
+    evt.currentTarget.classList.add('active');
+  }
+
+  // Optionally open the first tab by default
+  window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.tab button').click();
+  });
+</script>
+<!-- Script for switching tabs in dining section-->
+<script>
+const tabs = document.querySelectorAll(".spaces li");
+const contents = document.querySelectorAll(".content");
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const id = tab.getAttribute("data-id");
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+    contents.forEach(content => {
+      content.style.display = content.getAttribute("data-id") === id ? "block" : "none";
+    });
+  });
+});
+
+</script>
+<!-- Script for filtering the beers-->
+<script>
+  function filterBeers() {
+    const filterValue = document.getElementById('filterType').value.toLowerCase();
+    const beerCards = document.querySelectorAll('.beer-card');
+
+    beerCards.forEach(card => {
+      const type = card.getAttribute('data-type').toLowerCase();
+      if (filterValue === 'all' || type === filterValue) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+  // Optional: Run on page load
+  window.addEventListener('DOMContentLoaded', filterBeers);
+</script>
+<!-- script for filtering the Beverages-->
+<script>
+  function filterBeverages() {
+    const selectedType = document.getElementById("beverageType").value;
+    const cards = document.querySelectorAll("#beverageGrid .menu-card");
+
+    cards.forEach(card => {
+      const type = card.getAttribute("data-type");
+      if (selectedType === "All" || type === selectedType) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  }
+</script>
+<!-- script for switching the tabs of our menu-->
+<script>
+  function showTab(evt, tabId) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.food, .beverages');
+    tabContents.forEach(tab => tab.style.display = 'none');
+
+    // Remove 'active' class from all menu buttons
+    const tabButtons = document.querySelectorAll('.tabclick1');
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    // Show selected tab and highlight the clicked button
+    document.getElementById(tabId).style.display = 'block';
+    evt.currentTarget.classList.add('active');
+  }
+
+
+  // Optionally show first tab on load
+  window.addEventListener('DOMContentLoaded', () => {
+    const firstButton = document.querySelector('.tabclick1');
+    if (firstButton) firstButton.click();
+  });
+</script>
+<!-- script for filtering the rooms-->
+<script>
+  document.getElementById('roomFilterForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nights = parseInt(document.getElementById('nights').value, 10);
+    const adults = parseInt(document.getElementById('adults').value, 10);
+    const children = parseInt(document.getElementById('children').value, 10);
+
+    const rooms = document.querySelectorAll('.room-card');
+
+    rooms.forEach(room => {
+      const maxAdults = parseInt(room.dataset.maxAdults, 10);
+      const maxChildren = parseInt(room.dataset.maxChildren, 10);
+      const minNights = parseInt(room.dataset.minNights, 10);
+
+      const matchesAdults = adults <= maxAdults;
+      const matchesChildren = children <= maxChildren;
+      const matchesNights = nights >= minNights;
+
+      if (matchesAdults && matchesChildren && matchesNights) {
+        room.style.display = 'block';
+      } else {
+        room.style.display = 'none';
+      }
+    });
+  });
+  document.getElementById("reservationForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    date: form.date.value,
+    time: form.time.value,
+    guests: form.guests.value,
+    seating: form.seating.value,
+    location: form.location.value,
+    requests: form.requests.value,
+    name: form.name.value,
+    phone: form.phone.value,
+    email: form.email.value,
+  };
+
+  console.log("Reservation Details:", data);
+  alert(`Reservation Confirmed!\n\nThank you, ${data.name}.\nYour reservation for ${data.guests} at ${data.time} on ${data.date} has been received.`);
+
+  downloadJSON(data);
+});
+
+  function downloadJSON(data, filename = "reservation.json") {
+  const jsonStr = JSON.stringify(data, null, 2);
+  const blob = new Blob([jsonStr], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+</script>
+<!-- script for filtering the upcoming events-->
+<script>
+  document.getElementById('eventType').addEventListener('change', filterEvents);
+  document.getElementById('eventDate').addEventListener('change', filterEvents);
+
+  function filterEvents() {
+    const selectedType = document.getElementById('eventType').value;
+    const selectedDate = document.getElementById('eventDate').value;
+    const eventCards = document.querySelectorAll('.event-card');
+
+    eventCards.forEach(card => {
+      const tag = card.querySelector('.tag').classList[1]; // Get second class as tag (e.g., live-music)
+      const textContent = card.innerText || card.textContent;
+      const matchesType = selectedType === 'all' || tag === selectedType;
+
+      let matchesDate = true;
+      if (selectedDate) {
+        const regex = /📅\s+([A-Za-z]+),?\s+([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/;
+        const match = textContent.match(regex);
+
+        if (match) {
+          const eventDateStr = `${match[2]} ${match[3]}, ${match[4]}`; // "May 3, 2025"
+          const eventDate = new Date(eventDateStr);
+          const inputDate = new Date(selectedDate);
+
+          // Match year, month, and day
+          matchesDate = eventDate.toDateString() === inputDate.toDateString();
+        } else {
+          matchesDate = false; // No valid date found in content
+        }
+      }
+
+      if (matchesType && matchesDate) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+<!-- Script for contact-->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // prevent form from actually submitting
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    alert(`Your message has been sent!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+
+    this.reset(); // clear the form after alert
+  });
+</script>
+</html>
