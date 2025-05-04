@@ -519,6 +519,7 @@ footer p {
   color: white;
   border-radius: 12px;
   overflow: hidden;
+  margin: 65px 10px 30px auto;
 }
 
 .dining-info img {
