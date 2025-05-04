@@ -407,6 +407,7 @@
               <option value="1">1 Adult</option>
               <option value="2">2 Adults</option>
               <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
             </select>
           </div>
           <div class="form-group">
@@ -454,6 +455,27 @@
           <p class="price">₹9999 / night</p>
           <a href="#book">Book Now</a>
         </div>
+      </section>
+      <!-- Guest Information Form -->
+      <section id="guestInfoSection" style="display: none;">
+        <h4 style="text-align: center;" class="reser">Your Information</h4>
+        <form id="guestInfoForm">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="guestName" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="guestEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" id="guestPhone" placeholder="Enter your phone number" required>
+          </div>
+          <div style="text-align: center;">
+            <button type="submit" class="complete">Complete Booking</button>
+          </div>
+        </form>
       </section>
     </section>
     <!-- booking for an table-->
@@ -711,7 +733,7 @@
         </section>
     </section>
     <!-- photograpy servieses...-->
-    <section class="photography-section">
+    <section class="photography-section" id="photography-section">
       <h2>Photography Services</h2>
       <p class="subheading">Capture your special moments at our restaurant with our professional photography services. Whether it's a romantic dinner, family celebration, or corporate event, our photographers will help you preserve the memories.</p>
       <div class="tab">
@@ -782,7 +804,7 @@
           </ul>
           <div class="price-row">
             <span class="price">₹1700</span>
-            <button class="book-btn">Book Now</button>
+            <button type="submit" class="book-btn">Book Now</button>
           </div>
         </div>
       </div>
@@ -820,6 +842,27 @@
           </div>
         </div>
     </section>
+    <section id="photoGuestInfoSection">
+      <h4 style="text-align: center;" class="reser">Enter Your Information</h4>
+      <form id="photoGuestForm">
+        <div class="form-group">
+          <label for="photoGuestName">Your Name</label>
+          <input type="text" id="photoGuestName" required placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="photoGuestEmail">Email</label>
+          <input type="email" id="photoGuestEmail" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="photoGuestPhone">Phone</label>
+          <input type="tel" id="photoGuestPhone" required placeholder="Enter your phone number">
+        </div>
+        <div class="form-group" style="text-align:center;">
+          <button type="submit">Confirm Booking</button>
+        </div>
+      </form>
+    </section>
+   
     <!-- contact us-->
     <section id="contact" class="contact-section">
       <h2>Contact Us</h2>
@@ -876,7 +919,7 @@
               preserving memories of an exceptional dining experience.
             </p>
             <p><strong>Starting at ₹500</strong><br><small>Advance booking required</small></p>
-            <a href="#photographer" class="photo-button">Book a Photographer</a>
+            <a href="#photography-section" class="photo-button">Book a Photographer</a>
           </div>
         </div>
       </div>
@@ -1046,31 +1089,6 @@ tabs.forEach(tab => {
 </script>
 <!-- script for filtering the rooms-->
 <script>
-  document.getElementById('roomFilterForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const nights = parseInt(document.getElementById('nights').value, 10);
-    const adults = parseInt(document.getElementById('adults').value, 10);
-    const children = parseInt(document.getElementById('children').value, 10);
-
-    const rooms = document.querySelectorAll('.room-card');
-
-    rooms.forEach(room => {
-      const maxAdults = parseInt(room.dataset.maxAdults, 10);
-      const maxChildren = parseInt(room.dataset.maxChildren, 10);
-      const minNights = parseInt(room.dataset.minNights, 10);
-
-      const matchesAdults = adults <= maxAdults;
-      const matchesChildren = children <= maxChildren;
-      const matchesNights = nights >= minNights;
-
-      if (matchesAdults && matchesChildren && matchesNights) {
-        room.style.display = 'block';
-      } else {
-        room.style.display = 'none';
-      }
-    });
-  });
   document.getElementById("reservationForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -1088,23 +1106,8 @@ tabs.forEach(tab => {
   };
 
   console.log("Reservation Details:", data);
-  alert(`Reservation Confirmed!\n\nThank you, ${data.name}.\nYour reservation for ${data.guests} at ${data.time} on ${data.date} has been received.`);
-
-  downloadJSON(data);
+  alert(`Reservation Confirmed!\n\nThank you, ${data.name}.\nYour reservation for ${data.guests} at ${data.time} on ${data.date} has been received.`); 
 });
-
-  function downloadJSON(data, filename = "reservation.json") {
-  const jsonStr = JSON.stringify(data, null, 2);
-  const blob = new Blob([jsonStr], { type: "application/json" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-
-  URL.revokeObjectURL(url);
-}
 </script>
 <!-- script for filtering the upcoming events-->
 <script>
@@ -1160,4 +1163,107 @@ tabs.forEach(tab => {
     this.reset(); // clear the form after alert
   });
 </script>
+<!-- Script for filtering and showing guest info-->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("roomFilterForm");
+    const guestForm = document.getElementById("guestInfoForm");
+    const guestFormSection = document.getElementById("guestInfoSection");
+
+    let selectedRoomName = ""; // to hold the name of the selected room
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const checkin = document.getElementById("checkin").value;
+      const nights = parseInt(document.getElementById("nights").value);
+      const adults = parseInt(document.getElementById("adults").value);
+      const children = parseInt(document.getElementById("children").value);
+
+      const rooms = document.querySelectorAll(".room-card");
+      rooms.forEach(room => {
+        const maxAdults = parseInt(room.dataset.maxAdults);
+        const maxChildren = parseInt(room.dataset.maxChildren);
+        const minNights = parseInt(room.dataset.minNights);
+
+        const isMatch =
+          adults <= maxAdults &&
+          children <= maxChildren &&
+          nights >= minNights;
+
+        room.style.display = isMatch ? "block" : "none";
+      });
+
+      guestFormSection.style.display = "none";
+    });
+
+    const bookNowButtons = document.querySelectorAll(".room-card a");
+    bookNowButtons.forEach(button => {
+      button.addEventListener("click", function (e) {
+        e.preventDefault();
+        const roomCard = this.closest(".room-card");
+        selectedRoomName = roomCard.querySelector("h3").textContent;
+
+        guestFormSection.style.display = "block";
+        guestFormSection.scrollIntoView({ behavior: "smooth" });
+      });
+    });
+
+    guestForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("guestName").value;
+      const email = document.getElementById("guestEmail").value;
+      const phone = document.getElementById("guestPhone").value;
+
+      const checkin = document.getElementById("checkin").value;
+      const nights = document.getElementById("nights").value;
+      const adults = document.getElementById("adults").value;
+      const children = document.getElementById("children").value;
+
+      alert(
+        `Booking Confirmed!\n\n` +
+        `Room: ${selectedRoomName}\n` +
+        `Check-in: ${checkin}\n` +
+        `Nights: ${nights}\n` +
+        `Adults: ${adults}\n` +
+        `Children: ${children}\n\n` +
+        `Guest Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Phone: ${phone}`
+      );
+
+      guestForm.reset();
+      form.reset();
+      guestFormSection.style.display = "none";
+    });
+  });
+</script>
+<!--Script for booking photo section-->
+<script>
+  let selectedPackage = '';
+
+  document.querySelectorAll('.book-btn, .reserve-button').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      selectedPackage = this.closest('.photo-card')?.querySelector('h3')?.textContent || 'Photobooth';
+      document.getElementById('photoGuestForm').reset();
+      document.getElementById('photoGuestInfoSection').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('photoGuestInfoSection').offsetTop - 50, behavior: 'smooth' });
+    });
+  });
+
+  document.getElementById('photoGuestForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const name = document.getElementById('photoGuestName').value;
+    const email = document.getElementById('photoGuestEmail').value;
+    const phone = document.getElementById('photoGuestPhone').value;
+
+    alert(`Booking Confirmed!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPackage: ${selectedPackage}`);
+
+    document.getElementById('photoGuestInfoSection').style.display = 'none';
+  });
+</script>
+
+
 </html>

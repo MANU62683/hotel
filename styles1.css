@@ -551,10 +551,19 @@ footer p {
   display:flex;
   flex-direction: column;
 }
+.reser{
+  margin-top: 0px;
+  color: rgb(128,0,32);
+  font-size:1.5em;
+}
+.complete{
+  margin-top: 27px;
+}
 form {
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 20px;
+  margin: 40px 40px;
 }
 form button{
   grid-column:2/span 2;
@@ -646,6 +655,17 @@ button:hover {
 }
 
 /* Photography section */
+#photoGuestInfoSection input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#photoGuestInfoSection button {
+  margin: 30px 30px;
+}
 .photography-section {
   padding: 50px 20px;
   text-align: center;
