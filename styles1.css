@@ -1415,8 +1415,9 @@ font-family: Playfair Display,serif;
     flex-direction: column !important;
   }
   .reservation-form {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 2fr !important;
     padding: 10px;
+    margin:5px 0;
   }
   .form-group,
   .availability-form input,
