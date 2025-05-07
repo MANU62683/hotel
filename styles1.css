@@ -664,9 +664,6 @@ button:hover {
   border-radius: 8px;
   font-size: 1rem;
 }
-#photoGuestInfoSection button {
-  margin: 30px 30px;
-}
 .photography-section {
   padding: 50px 20px;
   text-align: center;
@@ -1344,4 +1341,161 @@ font-family: Playfair Display,serif;
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
+}
+@media only screen and (max-width: 480px) {
+  /* HIDE desktop navigation */
+  .menu-index,
+  .register {
+    display: none;
+  }
+
+  header {
+    padding: 10px;
+    background-color: white;
+    position: relative;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  /* HERO SECTION - full screen */
+  .hero,
+  .slideshow-container,
+  .slide {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide-info {
+    bottom: 10%;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .slide-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .slide-info p {
+    font-size: 1rem;
+  }
+
+  .slide-info a {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .subheading{
+    text-align: center;
+  }
+  /* FORM SECTION - availability, reservation, guest info, etc. */
+  .availability-form form,
+  .guestInfoSection form,
+  .photoGuestInfoSection form {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 20px !important;
+    gap: 15px !important;
+  }
+  .reservation-form form{
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+  }
+  .reservation-form {
+    grid-template-columns: 1fr !important;
+    padding: 20px;
+    margin: 5px auto;
+  }
+  .form-group,
+  .availability-form input,
+  .availability-form select,
+  .photoGuestInfoSection input,
+  .photoGuestInfoSection button {
+    width: 100% !important;
+    font-size: 1rem;
+    padding: 10px !important;
+  }
+
+  form button,
+  .reservation-form button,
+  .photoGuestInfoSection button {
+    margin-top: 15px;
+    padding: 5px 15px;
+    align-items: center;
+  }
+
+  /* Stack layout in all section cards */
+  .room-list,
+  .menu-grid,
+  .beer-grid,
+  .event-grid,
+  .photo-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .room-card,
+  .menu-card,
+  .beer-card,
+  .event-card,
+  .photo-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .container,
+  .about1,
+  .reservation-wrapper,
+  .contact-container,
+  .photo-left,
+  .photo-right {
+    flex-direction: column !important;
+    display: flex !important;
+    width: 100% !important;
+  }
+
+  .photo-left img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .footer {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .tab-controls,
+  .filters,
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab-controls button,
+  .filters select,
+  .controls select {
+    width: 100%;
+  }
+
+  .image-box img {
+    height: auto;
+    object-fit: cover;
+  }
 }
