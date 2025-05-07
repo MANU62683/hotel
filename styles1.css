@@ -1411,7 +1411,7 @@ font-family: Playfair Display,serif;
     gap: 15px !important;
   }
   .reservation-form form{
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 2fr !important;
     flex-direction: column !important;
   }
   .reservation-form {
