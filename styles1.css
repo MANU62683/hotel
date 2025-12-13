@@ -849,16 +849,6 @@ button:hover {
   color: #0b5394;
 }
 
-.popular-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #fcd34d;
-  padding: 4px 8px;
-  font-size: 0.75rem;
-  border-radius: 5px;
-  font-weight: bold;
-}
 
 .view-full {
   display: block;
