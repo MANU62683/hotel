@@ -84,7 +84,9 @@ nav {
 .register a:hover {
   background-color: rgb(173, 8, 8);
 }
-
+section {
+  scroll-margin-top: 90px; /* adjust to your header height */
+}
 /* Hero section with slideshow */
 .hero {
   margin: auto;
