@@ -805,7 +805,7 @@
                 </div>
               </div>
               <div class="feature">
-                <div class="feature-icon">🖨️</div>
+                <div class="feature-icon">🖨</div>
                 <div class="feature-text">
                   <strong>Instant Printing</strong>
                   Take home physical prints instantly, plus digital copies
@@ -1078,7 +1078,7 @@ tabs.forEach(tab => {
   };
 
   console.log("Reservation Details:", data);
-  alert(`Reservation Confirmed!\n\nThank you, ${data.name}.\nYour reservation for ${data.guests} at ${data.time} on ${data.date} has been received.`); 
+  alert(Reservation Confirmed!\n\nThank you, ${data.name}.\nYour reservation for ${data.guests} at ${data.time} on ${data.date} has been received.); 
 });
 </script>
 <!-- script for filtering the upcoming events-->
@@ -1102,7 +1102,7 @@ tabs.forEach(tab => {
         const match = textContent.match(regex);
 
         if (match) {
-          const eventDateStr = `${match[2]} ${match[3]}, ${match[4]}`; // "May 3, 2025"
+          const eventDateStr = ${match[2]} ${match[3]}, ${match[4]}; // "May 3, 2025"
           const eventDate = new Date(eventDateStr);
           const inputDate = new Date(selectedDate);
 
@@ -1130,7 +1130,7 @@ tabs.forEach(tab => {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    alert(`Your message has been sent!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`);
+    alert(Your message has been sent!\n\nName: ${name}\nEmail: ${email}\nMessage: ${message});
 
     this.reset(); // clear the form after alert
   });
@@ -1194,15 +1194,15 @@ tabs.forEach(tab => {
       const children = document.getElementById("children").value;
 
       alert(
-        `Booking Confirmed!\n\n` +
-        `Room: ${selectedRoomName}\n` +
-        `Check-in: ${checkin}\n` +
-        `Nights: ${nights}\n` +
-        `Adults: ${adults}\n` +
-        `Children: ${children}\n\n` +
-        `Guest Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone}`
+        Booking Confirmed!\n\n +
+        Room: ${selectedRoomName}\n +
+        Check-in: ${checkin}\n +
+        Nights: ${nights}\n +
+        Adults: ${adults}\n +
+        Children: ${children}\n\n +
+        Guest Name: ${name}\n +
+        Email: ${email}\n +
+        Phone: ${phone}
       );
 
       guestForm.reset();
@@ -1231,7 +1231,7 @@ tabs.forEach(tab => {
     const email = document.getElementById('photoGuestEmail').value;
     const phone = document.getElementById('photoGuestPhone').value;
 
-    alert(`Booking Confirmed!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPackage: ${selectedPackage}`);
+    alert(Booking Confirmed!\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPackage: ${selectedPackage});
 
     document.getElementById('photoGuestInfoSection').style.display = 'none';
   });
