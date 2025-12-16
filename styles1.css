@@ -337,7 +337,7 @@ section {
   text-align: left;
 }
 .contact-form h3{
-  margin: 0 0 20px;
+  margin: 0 42px 30px;
   font-size: 25px;
 }
 
@@ -461,6 +461,7 @@ footer p {
   color: #666;
   max-width: 700px;
   margin: 0 auto 40px;
+  text-align: center;
 }
 .reservation-wrapper {
   display: grid;
@@ -1355,9 +1356,6 @@ font-weight: bold;
     padding: 8px 14px;
     display: inline-block;
     margin-top: 10px;
-  }
-  .subheading{
-    text-align: center;
   }
   /* FORM SECTION - availability, reservation, guest info, etc. */
   .availability-form form,
