@@ -90,10 +90,10 @@ section {
 /* Hero section with slideshow */
 .hero {
   margin: auto;
-  border-radius: 10px;
+  border-radius: 5px;
   position: relative;
   overflow: hidden;
-  height: 70vh;
+  height: 80vh;
   background-color: #f4f4f4;
 }
 
@@ -164,38 +164,46 @@ section {
 }
 .about1{
   max-width: 1500px;
-  margin: 30px auto;
-  padding: 20px;
+  margin: 20px;
+  padding: 30px;
   text-align: center;
   display: grid;
-  grid-template-columns: auto auto auto;
-  gap:15px;
+  grid-template-columns: auto auto;
+  gap:10px;
   align-items:start;
-  margin-bottom: 20px;
+  
 }
 .about img{
-  width: 100%;
-  height:250px;
+  width: 90%;
+  height:270px;
   border-radius:10px;
   margin: 5px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.about-image {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+.about img:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
+
+.about-info p{
+  align-items: center;
+  min-height: 250px; 
+}
+
 .about p{
-  font-family: Montserrat,sans-serif;
-  font-size:19px;
+  font-family: 'Montserrat', sans-serif;
+  font-size:20px;
   text-align: left;
   color: #555;
-  margin-bottom: 10px;
+  margin-top: 25px;
+  padding: 20px;
 }
 
 /* Services Section */
 .services {
-  padding: 50px 20px;
+  margin: 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -246,7 +254,7 @@ section {
 
 /* Our Menu Section */
 .our-menu {
-  padding: 50px 20px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -299,7 +307,7 @@ section {
 /* Contact Section */
 
 .contact-section {
-  padding: 60px 20px;
+  padding: 10px 20px;
   color: black;
   text-align: center;
 }
@@ -441,8 +449,8 @@ footer p {
 
 /* reservation form*/
 .reservation-section {
-  max-width: 1150px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: 30px auto;
   padding: 20px;
   text-align: center;
 }
@@ -515,18 +523,19 @@ footer p {
   cursor: pointer;
 }
 
-.dining-info {
+.dining-info-section {
   text-align: left;
   background:rgb(128,0,32);
   color: white;
   border-radius: 12px;
   overflow: hidden;
   margin: 65px 10px 30px auto;
+  margin-top: 40px;
 }
 
 .dining-info img {
   width: 100%;
-  height: auto;
+  height: 385px;
   display: block;
 }
 
@@ -622,6 +631,10 @@ button:hover {
   text-align: center;
   padding-bottom: 15px;
 }
+.room-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
 
 .room-card img {
   width: 100%;
@@ -682,6 +695,7 @@ button:hover {
   gap: 30px;
   justify-content: space-evenly;
   margin-top: 30px;
+  align-items: stretch;
 }
 
 .photo-card {
@@ -691,6 +705,8 @@ button:hover {
   padding: 20px;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-image {
@@ -737,9 +753,9 @@ button:hover {
 
 .price-row {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 15px;
+  margin-top: auto;
 }
 
 .price {
@@ -760,139 +776,6 @@ button:hover {
 .book-btn:hover {
   background-color: #a11c32;
 }
-/* looking the list of the food*/
-.filters {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0;
-}
-.filters {
-  margin: 1rem 0;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.filters select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.menu-grid {
-  display: flex;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.menu-card {
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-}
-.menu-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-
-}
-
-.menu-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.menu-content {
-  padding: 15px;
-}
-
-.menu-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.menu-description {
-  font-size: 0.95rem;
-  margin-bottom: 10px;
-}
-
-.price {
-  color: #b12704;
-  font-weight: bold;
-}
-
-.labels span {
-  font-size: 0.75rem;
-  padding: 3px 7px;
-  margin-right: 5px;
-  border-radius: 5px;
-  background: #e0f8e9;
-  color: #276749;
-  font-size: 0px;
-}
-
-.labels .gf {
-  background: #d1e7ff;
-  color: #0b5394;
-}
-
-
-.view-full {
-  display: block;
-  width: fit-content;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #800020;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-/* tabs*/
-  .tab-controls {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    justify-content: center;
-  }
-
-  .tab-controls button {
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color:#222;
-    border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background 0.1s ease;
-  }
-
-  .tabclick1.active {
-    background-color:#800020;
-    color: #fff;
-  }
-
-  .food {
-    display: none;
-  }
-
-  .food.active {
-    display: block;
-  }
-
-
 /* photobooth section with havinng the tab*/
 .tab {
   display: flex;
@@ -929,47 +812,6 @@ font-family: Montserrat, sans-serif;
 display: flex;
 flex-wrap: wrap;
 gap: 20px;
-}
-
-/* Photo Card Styles */
-.photo-card {
-width: 100%;
-max-width: 350px;
-background: white;
-padding: 20px;
-border-radius: 10px;
-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.photo-image {
-position: relative;
-}
-
-.photo-image img {
-width: 100%;
-border-radius: 6px;
-}
-
-.price-row {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 10px;
-}
-
-.price {
-font-weight: bold;
-font-size: 1.2rem;
-color: #800020;
-}
-
-.book-btn {
-padding: 6px 12px;
-background: #800020;
-color: white;
-border: none;
-border-radius: 4px;
-cursor: pointer;
 }
 
 /* Photobooth Section */
@@ -1052,6 +894,119 @@ border-radius: 6px;
 text-decoration: none;
 font-weight: bold;
 }
+/* looking the list of the food*/
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+.filters {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filters select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-card {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+.menu-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.menu-content {
+  padding: 15px;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.menu-description {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.price {
+  color: #b12704;
+  font-weight: bold;
+}
+.view-full {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #800020;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+/* tabs*/
+  .tab-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+  }
+
+  .tab-controls button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color:#222;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.1s ease;
+  }
+
+  .tabclick1.active {
+    background-color:#800020;
+    color: #fff;
+  }
+
+  .food {
+    display: none;
+  }
+
+  .food.active {
+    display: block;
+  }
 /* upcoming events section*/
 .filters {
   display: flex;
@@ -1094,7 +1049,7 @@ font-weight: bold;
 
 /* Image Banner */
 .event-image {
-  height: 180px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -1132,6 +1087,9 @@ font-weight: bold;
 /* Card Content */
 .event-content {
   padding: 20px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-content h3 {
@@ -1145,6 +1103,11 @@ font-weight: bold;
   margin-bottom: 10px;
   font-family: Montserrat,sans-serif;
 }
+.event-content a {
+  content: '';
+  text-decoration: none;
+  margin-top: auto;
+}
 
 /* Button */
 .reserve-btn {
@@ -1157,11 +1120,13 @@ font-weight: bold;
   cursor: pointer;
   transition: background-color 0.2s ease;
   text-decoration: none;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: auto
 }
 
 .reserve-btn:hover {
-  background-color: #5a0d19;
+  background-color: rgb(173, 8, 8);
 }
 /* dining section*/
 .content {
@@ -1177,10 +1142,11 @@ font-weight: bold;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: center;
   background-color: white;
+  margin-top: 13px;
 }
 .container {
   display: flex;
-  padding: 2rem;
+  padding: 2.5rem;
   gap: 2rem;
 }
 .image-box img {
@@ -1192,8 +1158,8 @@ font-weight: bold;
 }
 .image-box h3{
   font-size: 1.8rem;
-line-height: 2rem;
-font-family: Playfair Display,serif;
+  line-height: 2rem;
+  font-family: Playfair Display,serif;
 }
 .image-box p{
   font-family: Montserrat,sans-serif;
@@ -1334,6 +1300,7 @@ font-family: Playfair Display,serif;
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+/* Responsive Styles for Mobile */
 @media only screen and (max-width: 480px) {
   /* HIDE desktop navigation */
   .menu-index,
